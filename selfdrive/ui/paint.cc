@@ -230,6 +230,7 @@ static void ui_draw_vision_lane_lines(UIState *s) {
   const UIScene *scene = &s->scene;
 
   // paint lanelines
+  // NOTE(Michael): painting lanelines here
   line_vertices_data *pvd_ll = &s->lane_line_vertices[0];
   for (int ll_idx = 0; ll_idx < 4; ll_idx++) {
     if (s->sm->updated("modelV2")) {
@@ -240,6 +241,7 @@ static void ui_draw_vision_lane_lines(UIState *s) {
   }
 
   // paint road edges
+  // NOTE(Michael): painting road edges here
   line_vertices_data *pvd_re = &s->road_edge_vertices[0];
   for (int re_idx = 0; re_idx < 2; re_idx++) {
     if (s->sm->updated("modelV2")) {
@@ -250,6 +252,7 @@ static void ui_draw_vision_lane_lines(UIState *s) {
   }
 
   // paint path
+  // NOTE(Michael): painting path here
   if (s->sm->updated("modelV2")) {
     update_track_data(s, scene->model.getPosition(), &s->track_vertices);
   }

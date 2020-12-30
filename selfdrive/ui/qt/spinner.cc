@@ -18,6 +18,7 @@ Spinner::Spinner(QWidget *parent) {
   const int img_size = 360;
 
   comma = new QLabel();
+  // NOTE(Michael): Swpinner image set here
   comma->setPixmap(QPixmap("../assets/img_spinner_comma.png").scaled(img_size, img_size, Qt::KeepAspectRatio, Qt::SmoothTransformation));
   comma->setFixedSize(img_size, img_size);
   main_layout->addWidget(comma, 0, 0, Qt::AlignHCenter | Qt::AlignVCenter);
@@ -38,17 +39,18 @@ Spinner::Spinner(QWidget *parent) {
   progress_bar->setVisible(false);
   main_layout->addWidget(progress_bar, 1, 0, Qt::AlignHCenter);
 
+  // NOTE(Michael): Swpinner collors set here
   setLayout(main_layout);
   setStyleSheet(R"(
     Spinner {
-      background-color: black;
+      background-color: #222629;
     }
     QLabel {
       color: white;
       font-size: 80px;
     }
     QProgressBar {
-      background-color: #373737;
+      background-color: #474B4f;
       height: 20px;
       width: 1000px;
       border solid white;
@@ -56,7 +58,7 @@ Spinner::Spinner(QWidget *parent) {
     }
     QProgressBar::chunk {
       border-radius: 10px;
-      background-color: white;
+      background-color: #61892F;
     }
   )");
 

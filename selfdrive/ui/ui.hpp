@@ -73,6 +73,7 @@ typedef enum UIStatus {
   STATUS_ALERT,
 } UIStatus;
 
+// NOTE(Michael): colors for UI warnings are stored here
 static std::map<UIStatus, NVGcolor> bg_colors = {
   {STATUS_OFFROAD, nvgRGBA(0x07, 0x23, 0x39, 0xf1)},
   {STATUS_DISENGAGED, nvgRGBA(0x17, 0x33, 0x49, 0xc8)},

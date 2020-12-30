@@ -151,6 +151,7 @@ from selfdrive.launcher import launcher
 
 
 # comment out anything you don't want to run
+# NOTE(Michael): these hash values seem to store pids of threads of other processes running
 managed_processes = {
   "thermald": "selfdrive.thermald.thermald",
   "uploader": "selfdrive.loggerd.uploader",
@@ -247,8 +248,8 @@ if EON:
     'rtshield',
   ]
 
-
-def register_managed_process(name, desc, car_started=False):
+# NOTE(Michael): car started process
+def register_managed_process(name, desc, car_started=True):
   global managed_processes, car_started_processes, persistent_processes
   managed_processes[name] = desc
   if car_started:
