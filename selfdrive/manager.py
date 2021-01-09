@@ -170,6 +170,7 @@ managed_processes = {
   "boardd": ("selfdrive/boardd", ["./boardd"]),   # not used directly
   "pandad": "selfdrive.pandad",
   "ui": ("selfdrive/ui", ["./ui"]),
+  "hud": ("selfdrive/ui", ["./hud"]),
   "calibrationd": "selfdrive.locationd.calibrationd",
   "paramsd": "selfdrive.locationd.paramsd",
   "camerad": ("selfdrive/camerad", ["./camerad"]),
@@ -203,6 +204,7 @@ persistent_processes = [
   'thermald',
   'logmessaged',
   'ui',
+  'hud',
   'uploader',
   'deleter',
 ]

@@ -41,6 +41,8 @@ Spinner::Spinner(QWidget *parent) {
 
   // NOTE(Michael): Swpinner collors set here
   setLayout(main_layout);
+  // NOTE(Michael): this doesn't work, doesn't really need to be here either
+  // std::string result = read_param(&themeing_b, "theming_B", true);
   setStyleSheet(R"(
     Spinner {
       background-color: #222629;

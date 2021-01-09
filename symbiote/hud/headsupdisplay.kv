@@ -1,0 +1,13 @@
+#:kivy 1.0.9
+#:import utils kivy.utils
+
+<RootWidget>:
+  canvas:
+    Color:
+      rgb: utils.get_color_from_hex('#222629')
+    Rectangle:
+      pos: self.pos
+      size: self.size
+
+<HeadsUpDisplay>:
+  root: root_widget
