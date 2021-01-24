@@ -1,3 +1,3 @@
-from symbiote.hud.main import HeadUpDisplayApp
+from symbiote.hud.main import HeadsUpDisplayApp
 
-HeadUpDisplayApp().run()
+HeadsUpDisplayApp().run()

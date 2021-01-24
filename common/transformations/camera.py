@@ -84,6 +84,7 @@ def get_calib_from_vp(vp):
 
 # aka 'extrinsic_matrix'
 # road : x->forward, y -> left, z->up
+# NOTE(Michael): returns a numpy array of an image
 def get_view_frame_from_road_frame(roll, pitch, yaw, height):
   device_from_road = orient.rot_from_euler([roll, pitch, yaw]).dot(np.diag([1, -1, -1]))
   view_from_road = view_frame_from_device_frame.dot(device_from_road)
@@ -106,7 +107,7 @@ def vp_from_ke(m):
   """
   return (m[0, 0]/m[2, 0], m[1, 0]/m[2, 0])
 
-
+# NOTE(Michael): will need to make our own for our camera in the future
 def vp_from_rpy(rpy, intrinsics=fcam_intrinsics):
   e = get_view_frame_from_road_frame(rpy[0], rpy[1], rpy[2], 1.22)
   ke = np.dot(intrinsics, e)

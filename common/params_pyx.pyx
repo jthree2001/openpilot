@@ -56,6 +56,7 @@ keys = {
   b"ShouldDoUpdate": [TxType.CLEAR_ON_MANAGER_START],
   b"SubscriberInfo": [TxType.PERSISTENT],
   b"TermsVersion": [TxType.PERSISTENT],
+  b"Theming": [TxType.PERSISTENT],
   b"TrainingVersion": [TxType.PERSISTENT],
   b"UpdateAvailable": [TxType.CLEAR_ON_MANAGER_START],
   b"UpdateFailedCount": [TxType.CLEAR_ON_MANAGER_START],
